@@ -3,22 +3,22 @@ from math import *
 
 # addition function
 def add(a,b):
-    c = float(a) + float(b)
+    c = float(a)+float(b)
     print(c)
 
 # subtraction function
 def subtract(a,b):
-    c =float(a) - float(b)
+    c = float(a)-float(b)
     print(c)
 
 # multiplication function
 def multiply(a,b):
-    c = float(a) * float(b)
+    c = float(a)*float(b)
     print(c)
 
 # division function
 def divide(a,b):
-    c = float(a) / float(b)
+    c = float(a)/float(b)
     print(c)
 
 # accept expression
@@ -29,30 +29,37 @@ mu = eq.find("*") # look for * symbol
 di = eq.find("/") # look for / symbol
 
 # if + is found
-if ad==1:
+if ad>1:
     # extract operands and store in list
     s  = eq.split("+")
     n1 = s[0]
     n2 = s[1]
+    print(s)
     add(n1,n2) # send operands to function
+
 # if - is found
-elif su ==1:
+elif su>1:
     # extract operands and store in list
     s  = eq.split("-")
     n1 = s[0]
     n2 = s[1]
+    print(s)
     subtract(n1,n2) # send operands to function
+
 # if * is found
-elif mu == 1:
+elif mu>1:
     # extract operands and store in list
     s  = eq.split("*")
     n1 = s[0]
     n2 = s[1]
+    print(s)
     multiply(n1,n2) # send operands to function
+    
 # if / is found
-elif di == 1:
+elif di>1:
     # extract operands and store in list
     s = eq.split("/")
     n1 = s[0]
     n2 = s[1]
+    print(s)
     divide(n1,n2) # send operands to function
